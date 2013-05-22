@@ -11,7 +11,7 @@ ntd directiv是一组directive包
 ```js
 {
     "dependencies": {
-        "angular-ntd-directive": "git@git.ec3s.com:ntd/angular-ntd-directive.git#0.0.4"
+        "xcxd-angular-ui": "git@github.com:tiw/xcxd-angular-ui.git#0.0.1"
     }
 }
 ```
