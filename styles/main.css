@@ -1,0 +1,18 @@
+/* line 1, scss/main.scss */
+dt {
+  font-size: larger;
+  margin-botton: 10px;
+}
+
+/* line 6, scss/main.scss */
+pre.prettyprint.big-padding {
+  margin: 10px;
+  padding: 10px;
+  padding-left: 20px;
+  background-color: white;
+}
+
+/* line 12, scss/main.scss */
+li {
+  margin: 10px;
+}
