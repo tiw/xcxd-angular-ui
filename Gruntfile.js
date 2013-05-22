@@ -20,7 +20,7 @@ module.exports = function(grunt) {
     jade: {
       html: {
         src: ['jade/*.jade'],
-        dest: '',
+        dest: '.',
         options: {
           client: false,
           compileDebug: true,

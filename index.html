@@ -1,74 +1,145 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Xcxd-angular-ui : " />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Xcxd-angular-ui</title>
+    <meta charset="utf-8">
+    <title>NTD Directives</title>
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/bootstrap-responsive.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="../components/jquery/jquery.js"></script>
+    <style>
+      body {
+          font: 10px sans-serif;
+      }
+      
+      .arc path {
+          stroke: #fff;
+      }
+    </style>
   </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/tiw/xcxd-angular-ui">View on GitHub</a>
-
-          <h1 id="project_title">Xcxd-angular-ui</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/tiw/xcxd-angular-ui/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/tiw/xcxd-angular-ui/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+  <body ng-app="demoApp">
+    <div class="well container">
+      <div class="span8"></div>
+      <section name="ntd-confirm-button" class="span10">
+        <h2>ntdConfirmButton</h2>
+        <dl>
+          <dt>目的</dt>
+          <dd>在执行一些危险操作的时候，用户需要再次确定再执行。</dd>
+          <dt>用法</dt>
+          <dd>
+            <pre class="prettyprint big-padding">&lt;button class=&quot;btn btn-primary&quot;
+    placement=&quot;right&quot; content=&quot;确定&quot;
+    ok-fn=&quot;sayHello('right')&quot;
+    ntd-confirm-button&gt;
+删除
+&lt;/button&gt;</pre>
+          </dd>
+          <dt>参数</dt>
+          <dd>
+            <ul>
+              <li>
+                <dl>
+                  <dt>placement</dt>
+                  <dd>弹出窗口相对于button的位置， [right, left, top, bottom]</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>content</dt>
+                  <dd>弹出窗口中现实的提示内容</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>ok-fn</dt>
+                  <dd>点击弹出窗口ok按键的回掉函数， 这个函数必须是在controller的scope里的</dd>
+                </dl>
+              </li>
+            </ul>
+          </dd>
+          <dt>例子</dt>
+          <dd>
+            <div ng-controller="ClickoverCtrl"><span>{{name}} said hello</span>
+              <ul>
+                <li>
+                  <button placement="right" content="确定？" ok-fn="sayHello('right')" ntd-confirm-button class="btn btn-primary">确定框右边</button>
+                </li>
+                <li>
+                  <button placement="left" content="确定？" ok-fn="sayHello('left')" ntd-confirm-button class="btn btn-primary">确定框左边</button>
+                </li>
+                <li>
+                  <button placement="top" content="确定？" ok-fn="sayHello('top')" ntd-confirm-button class="btn btn-primary">确定框上边</button>
+                </li>
+                <li>
+                  <button placement="bottom" content="确定？" ok-fn="sayHello('bottom')" ntd-confirm-button class="btn btn-primary">确定框下边</button>
+                </li>
+              </ul>
+            </div>
+          </dd>
+        </dl>
+      </section>
+      <section name="ntd-pie" class="span10">
+        <h2>ntdPie</h2>
+        <dl>
+          <dt>目的</dt>
+          <dd>可视化数据为饼图</dd>
+          <dt>用法</dt>
+          <dd>
+            <pre class="prettyprint big-padding">&lt;div ntd-pie data=&quot;ageData&quot; pie-height=&quot;500&quot;, pie-width=&quot;800&quot;&gt;&lt;/div&gt;</pre>
+          </dd>
+          <dt>参数</dt>
+          <dd>
+            <ul>
+              <li>
+                <dl>
+                  <dt>ntd-pie</dt>
+                  <dd>用来标记这里用饼图</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>pie-width</dt>
+                  <dd>图形的宽度， 默认值为800px</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>pie-height</dt>
+                  <dd>图形的高度， 默认值为800px</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>data</dt>
+                  <dd>需要图形化的数据
+                    <pre class="prettyprint big-padding">{&quot;total&quot;: 299, &quot;analysis&quot;: [
+   {&quot;name&quot;: &quot;20-30岁&quot;, &quot;value&quot;: 46},
+   {&quot;name&quot;: &quot;31-40岁&quot;, &quot;value&quot;: 46},
+   {&quot;name&quot;: &quot;41-50岁&quot;, &quot;value&quot;: 46},
+   {&quot;name&quot;: &quot;51-60岁&quot;, &quot;value&quot;: 27}]}</pre>
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+          </dd>
+          <dt>例子</dt>
+          <dd>
+            <div ng-controller="PieCtrl">
+              <div id="sample-pie" ntd-pie pie-height="500" pie-weight="800" data="ageData"></div>
+            </div>
+          </dd>
+        </dl>
       </section>
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Xcxd-angular-ui maintained by <a href="https://github.com/tiw">tiw</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
   </body>
 </html>
+<script src="../components/angular/angular.js"></script>
+<script src="../components/bootstrap/js/bootstrap-tooltip.js"></script>
+<script src="../components/bootstrap/js/bootstrap-popover.js"></script>
+<script src="../components/bootstrapx-clickover/js/bootstrapx-clickover.js"></script>
+<script src="../components/d3/d3.js"></script>
+<script src="../src/common.js"></script>
+<script src="../src/directives/ntd-confirm-button.js"></script>
+<script src="../src/directives/ntd-pie.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<script src="app.js"></script>
