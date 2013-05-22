@@ -1,19 +1,19 @@
 {
-  "name": "xcxd-ui-project",
+  "name": "ntd-directives",
   "description": "Reusable directives from NTD",
-  "version": "0.0.1",
-  "homepage": "http://blog.tiddr.de/xcxd-angular-ui",
+  "version": "0.0.3",
+  "homepage": "https://git.ec3s.com/ntd/angular-ntd-directive",
   "author": "Ting Wang <ting.wang@ec3s.com> Fengming Sun <sunfengming@ec3s.com>",
   "repository": {
     "type": "git",
-    "url": "git@github.com:tiw/xcxd-angular-ui.git"
+    "url": "git@git.ec3s.com:ntd/angular-ntd-directive.git"
   },
   "dependencies": {
     "angular": "~1.0.6",
     "bootstrap": "~2.3.1",
     "jquery": "~1.8.3",
     "bootstrapx-clickover": "*",
-    "d3": "~3.1.5",
+    "d3": "~3.1.5"
   },
   "main": "index.js",
   "ignore": [
