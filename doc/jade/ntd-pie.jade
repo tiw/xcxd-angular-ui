@@ -1,0 +1,42 @@
+section.span10(name="ntd-pie")
+    h2 ntdPie
+    dl
+        dt 目的
+        dd 可视化数据为饼图
+        dt 用法
+        dd
+            pre.prettyprint.big-padding.
+                <div ntd-pie data="ageData" pie-height="500", pie-width="800"></div>
+        dt 参数
+        dd
+            ul
+                li
+                    dl
+                        dt ntd-pie
+                        dd 用来标记这里用饼图
+                li
+                    dl
+                        dt pie-width
+                        dd 图形的宽度， 默认值为800px
+                li
+                    dl
+                        dt pie-height
+                        dd 图形的高度， 默认值为800px
+                li
+                    dl
+                        dt data
+                        dd 需要图形化的数据
+                            pre.prettyprint.big-padding.
+                                {"total": 299, "analysis": [
+                                   {"name": "20-30岁", "value": 46},
+                                   {"name": "31-40岁", "value": 46},
+                                   {"name": "41-50岁", "value": 46},
+                                   {"name": "51-60岁", "value": 27}]}
+        dt 例子
+        dd
+            div(ng-controller="PieCtrl")
+                div#sample-pie(
+                    ntd-pie
+                    pie-height="500"
+                    pie-weight="800"
+                    data="ageData")

@@ -1,0 +1,58 @@
+section.span10(name="ntd-confirm-button")
+    h2 ntdConfirmButton
+    dl
+        dt 目的
+        dd 在执行一些危险操作的时候，用户需要再次确定再执行。
+        dt 用法
+        dd
+            pre.prettyprint.big-padding.
+                &lt;button class=&quot;btn btn-primary&quot;
+                    placement=&quot;right&quot; content=&quot;确定&quot;
+                    ok-fn="sayHello('right')"
+                    ntd-confirm-button&gt;
+                删除
+                &lt;/button&gt;
+        dt 参数
+        dd
+            ul
+                li
+                    dl
+                        dt placement
+                        dd 弹出窗口相对于button的位置， [right, left, top, bottom]
+                li
+                    dl
+                        dt content
+                        dd 弹出窗口中现实的提示内容
+                li
+                    dl
+                        dt ok-fn
+                        dd 点击弹出窗口ok按键的回掉函数， 这个函数必须是在controller的scope里的
+        dt 例子
+        dd
+            div(ng-controller="ClickoverCtrl")
+                span {{name}} said hello
+                ul
+                    li
+                        button.btn.btn-primary(
+                        placement="right"
+                        content="确定？"
+                        ok-fn="sayHello('right')"
+                        ntd-confirm-button) 确定框右边
+                    li
+                        button.btn.btn-primary(
+                        placement="left"
+                        content="确定？"
+                        ok-fn="sayHello('left')"
+                        ntd-confirm-button) 确定框左边
+                    li
+                        button.btn.btn-primary(
+                        placement="top"
+                        content="确定？"
+                        ok-fn="sayHello('top')"
+                        ntd-confirm-button) 确定框上边
+                    li
+                        button.btn.btn-primary(
+                        placement="bottom"
+                        content="确定？"
+                        ok-fn="sayHello('bottom')"
+                        ntd-confirm-button) 确定框下边

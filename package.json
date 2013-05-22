@@ -1,0 +1,28 @@
+{
+  "name": "ntd-directives",
+  "description": "Reusable directives from NTD",
+  "version": "0.0.1",
+  "homepage": "https://git.ec3s.com/ntd/angular-ntd-directive",
+  "author": "Ting Wang <ting.wang@ec3s.com> Fengming Sun <sunfengming@ec3s.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@git.ec3s.com:ntd/angular-ntd-directive.git"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-jade": "~0.4.0",
+    "grunt-contrib-compass": "~0.1.3",
+    "grunt-contrib-coffee": "~0.7.0",
+    "matchdep": "~0.1.1",
+    "grunt-regarde": "~0.1.1",
+    "grunt-bower-task": "~0.2.2",
+    "express": "~3.2.0"
+  },
+  "engines": {
+    "node": ">=0.9.0"
+  },
+  "readme": "# Grunt: The JavaScript Task Runner [![Build Status](https://secure.travis-ci.org/gruntjs/grunt.png?branch=master)](http://travis-ci.org/gruntjs/grunt)\n\n### Documentation\n\nVisit the [gruntjs.com](http://gruntjs.com/) website for all the things.\n\n### Support / Contributing\nBefore you make an issue, please read our [Contributing](http://gruntjs.com/contributing) guide.\n\nYou can find the grunt team in [#grunt on irc.freenode.net](irc://irc.freenode.net/#grunt).\n\n### Release History\nSee the [CHANGELOG](CHANGELOG).\n",
+  "readmeFilename": "README.md"
+}
