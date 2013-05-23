@@ -1,7 +1,7 @@
 # xcxd angular directive
 
 
-[文档]: http://blog.tiddr.de/xcxd-angular-ui/ "文档"
+[文档和live demo](http://blog.tiddr.de/xcxd-angular-ui/ "文档和live demo")
 
 
 xcxd directiv是一组directive包
